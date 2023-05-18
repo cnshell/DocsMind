@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-const DEV_HOST = 'http://10.16.32.19:5000'
+const DEV_HOST = 'http://43.132.29.158:8080'
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [react()],

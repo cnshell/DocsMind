@@ -64,7 +64,7 @@ const Message: FC<MessageProps> = ({
                     <strong className="text-gray-400 pr-2 ">{isQuestion ? 'You' : 'AI'}</strong>
 
                     {item?.cost && (
-                        <Tooltip title={`Estimated cost ${item.cost} tokens`}>
+                        <Tooltip title={`预估消耗 ${item.cost} tokens`}>
                             <span className="cursor-pointer">
                                 <DollarOutlined /> cost
                             </span>
@@ -77,7 +77,7 @@ const Message: FC<MessageProps> = ({
                         className="cursor-pointer text-gray-400 text-xs items-center flex"
                         onClick={toggleShowSource}
                     >
-                        {showSources ? 'Hide Sources' : 'Show Source'}
+                        {showSources ? '隐藏来源' : '显示来源'}
                     </div>
                 )}
             </div>

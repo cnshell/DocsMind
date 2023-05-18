@@ -126,7 +126,7 @@ const ChatWindow: FC<ChatWindowProps> = ({
                         ...pre.slice(-1),
                         reply: (
                             <>
-                                <WarningTwoTone /> please retry
+                                <WarningTwoTone /> 请重试
                             </>
                         ),
                         error: true
@@ -139,7 +139,7 @@ const ChatWindow: FC<ChatWindowProps> = ({
 
     const onSearch = async () => {
         if (!openAiKey) {
-            message.error('Please set your openAI key')
+            message.error('请设置你的 openAI key')
             return
         }
 
@@ -158,7 +158,7 @@ const ChatWindow: FC<ChatWindowProps> = ({
     }
 
     const onSummarize = async () => {
-        setMessageList([...messageList, { question: 'Summarize the Document' }, { reply: '' }])
+        setMessageList([...messageList, { question: '总结文档' }, { reply: '' }])
         onReply('', true)
     }
 
@@ -179,17 +179,17 @@ const ChatWindow: FC<ChatWindowProps> = ({
                 flexDirection: 'column',
                 padding: '24px 0'
             }}
-            title={fileName ? `Chat with ${fileName}` : 'Select File'}
+            title={fileName || '选择文件'}
             extra={
                 <Popconfirm
                     disabled={!openAiKey}
-                    title="This will consume a large amount of tokens"
-                    description="Do you want to continue?"
-                    okText="Yes"
-                    cancelText="No"
+                    title="这将消耗大量 tokens"
+                    description="是否要继续?"
+                    okText="是的"
+                    cancelText="取消"
                     onConfirm={onSummarizeClick}
                 >
-                    <Tooltip title="Summarize">
+                    <Tooltip title="总结文档">
                         <Button icon={<ProfileOutlined />} disabled={!openAiKey}></Button>
                     </Tooltip>
                 </Popconfirm>
@@ -222,9 +222,7 @@ const ChatWindow: FC<ChatWindowProps> = ({
                     <Input.TextArea
                         disabled={loading || !openAiKey}
                         size="large"
-                        placeholder={
-                            openAiKey ? 'Input your question' : 'Configure your OpenAI key'
-                        }
+                        placeholder={openAiKey ? '输入你的问题' : '设置你的 OpenAI key'}
                         value={query}
                         className="pr-[36px]"
                         onKeyDown={onKeyDown}

@@ -94,7 +94,7 @@ const Home = () => {
                         className="mt-24"
                         image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
                         imageStyle={{ height: 60 }}
-                        description={<span>No uploaded file.</span>}
+                        description={<span>没有已上传文件</span>}
                     />
                 )}
             </div>

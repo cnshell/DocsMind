@@ -39,7 +39,7 @@ export default function SettingsModal({ open, onChange }: SettingsModalProps) {
                 <Form.Item
                     label="apiKey"
                     name="apiKey"
-                    rules={[{ required: true, message: 'Please input your apiKey!' }]}
+                    rules={[{ required: true, message: '请输入你的 apiKey!' }]}
                 >
                     <Input />
                 </Form.Item>

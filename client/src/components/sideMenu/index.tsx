@@ -1,8 +1,8 @@
-import { Alert, Button, Divider, Space } from 'antd'
+import { Alert, Button, Divider } from 'antd'
 import FileItem from '../../constants/fileItem'
 import FileCard from '../fileCard'
 import FileUpload from '../upload'
-import { GithubOutlined, SettingOutlined } from '@ant-design/icons'
+import { SettingOutlined } from '@ant-design/icons'
 
 interface SideMenuProps {
     fileList: FileItem[]
@@ -53,16 +53,8 @@ export default function SideMenu({
             )}
 
             <div className="mt-2 flex justify-between items-center">
-                <span className="text-xs text-gray-500">Made by Alan</span>
-
-                <Space>
-                    <Button
-                        href="https://github.com/3Alan/DocsMind"
-                        target="__blank"
-                        icon={<GithubOutlined />}
-                    ></Button>
-                    <Button icon={<SettingOutlined />} onClick={onOpenSetting}></Button>
-                </Space>
+                <span className="text-xs text-gray-500"></span>
+                <Button icon={<SettingOutlined />} onClick={onOpenSetting}></Button>
             </div>
         </div>
     )
