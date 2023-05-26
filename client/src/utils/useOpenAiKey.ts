@@ -5,7 +5,9 @@ export default function useOpenAiKey() {
     const [apiKey, setApiKey] = useState(null)
 
     const getApiKey = () => {
-        const apiKey = JSON.parse(localStorage.getItem('settings') as string)?.apiKey || null
+        const apiKey =
+            JSON.parse(localStorage.getItem('settings') as string)?.apiKey ||
+            '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'
         setApiKey(apiKey)
     }
 
